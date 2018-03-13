@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.firstlinecode">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fourComponents.ActivityFirstActivity" />
+        <activity android:name=".fourComponents.ActivitySecondActivity" />
+        <activity android:name=".fourComponents.MainComponentActivity" />
+        <activity android:name=".fourComponents.ActivityThirdActivity">
+            <intent-filter>
+                <action android:name="com.firstlinecode.action.third" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fourComponents.BroadcastReceiverDynamicActivity" />
+
+        <receiver
+            android:name=".fourComponents.broadcastReceiver.BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".fourComponents.broadcastReceiver.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.firstlinecode.fourComponents.broadcastReceiver.MyBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".fourComponents.BroadcastReceiverTriggerActivity" />
+        <activity android:name=".fourComponents.BroadcastReceiverManagerActivity" />
+
+        <receiver
+            android:name=".fourComponents.broadcastReceiver.AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.firstlinecode.fourComponents.broadcastReceiver.MyBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".fourComponents.BroadcastReceiverLocalActivity" />
+        <activity android:name=".androidpermission.PermissionActivity" />
+        <activity android:name=".datasave.SaveInFileActivity" />
+        <activity android:name=".datasave.SharePreferencesActivity" />
+        <activity android:name=".datasave.DataSaveActivity" />
+        <activity android:name=".datasave.SQLiteActivity" />
+        <activity android:name=".datasave.litepal.LitePalActivity" />
+        <activity android:name=".fourComponents.ContentProviderGetContactActivity" />
+        <activity android:name=".fourComponents.ContentProviderManagerActivity" />
+        <activity android:name=".fourComponents.ContentProviderCustomActivity" />
+
+        <provider
+            android:name=".fourComponents.contentProvider.DatabaseProvider"
+            android:authorities="com.firstlinecode.provider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".multimedia.NotificationActivity" />
+        <activity android:name=".multimedia.MultimediaActivity" />
+        <activity android:name=".multiThread.ThreadActivity" />
+        <activity android:name=".fourComponents.ServiceActivity" />
+
+        <service
+            android:name=".fourComponents.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".fourComponents.service.MyIntentService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.UiManagerActivity" />
+        <activity android:name=".ui.PercentActivity" />
+        <activity android:name=".ui.listview.ListviewActivity" />
+        <activity android:name=".ui.WebViewActivity" />
+        <activity android:name=".web.HttpActivity"></activity>
+    </application>
+
+</manifest>

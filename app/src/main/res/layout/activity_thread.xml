@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firstlinecode.multiThread.ThreadActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这里是需要被改变的内容"/>
+    <Button
+        android:id="@+id/thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传统方式创建子线程"/>
+    <Button
+        android:id="@+id/changUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="子线程改变UI"/>
+    <Button
+        android:id="@+id/asyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用asyncTask"/>
+    <Button
+        android:id="@+id/runOnUiThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用runOnUiThread"/>
+
+</LinearLayout>

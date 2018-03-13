@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firstlinecode.datasave.DataSaveActivity"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/gotoSaveInFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存文件到文件中"/>
+    <Button
+        android:id="@+id/gotoSaveInSharePreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存文件到SharePreferences中"/>
+    <Button
+        android:id="@+id/gotoSaveInDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存文件到dataBase中"/>
+    <Button
+        android:id="@+id/gotoLitePal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存文件到LitePal中"/>
+
+</LinearLayout>

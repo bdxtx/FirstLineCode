@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firstlinecode.ui.UiManagerActivity"
+    android:orientation="vertical">
+    <!--<include layout="@layout/title"/>-->
+    <com.firstlinecode.ui.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleName="这是自定义控件的标题"></com.firstlinecode.ui.TitleLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:text="test"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="button的文字显示"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/alertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动AlertDialog"/>
+    <Button
+        android:id="@+id/progressDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动progressDialog"/>
+    <Button
+        android:id="@+id/percentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="百分比布局"/>
+    <Button
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动listview"/>
+    <Button
+        android:id="@+id/startWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动WebView"/>
+
+</LinearLayout>
