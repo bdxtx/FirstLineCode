@@ -4,25 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.firstlinecode.web.HttpActivity"
+    tools:context="com.firstlinecode.web.JsonActivity"
     android:orientation="vertical">
     <Button
-        android:id="@+id/httpBtn"
+        android:id="@+id/JsonObject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="httpURLConnect"/>
+        android:text="使用JsonObject解析Json"/>
     <Button
-        android:id="@+id/okHttpBtn"
+        android:id="@+id/gson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="okHttp"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/httpShow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+        android:text="使用gson解析Json"/>
 
 </LinearLayout>

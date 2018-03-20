@@ -40,6 +40,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="android UI"/>
+        <Button
+            android:id="@+id/startWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="android网络技术"/>
+        <Button
+            android:id="@+id/startDataBinding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="android DataBinding"/>
     </LinearLayout>
 
 </ScrollView>

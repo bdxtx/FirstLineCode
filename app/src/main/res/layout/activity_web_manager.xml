@@ -4,25 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.firstlinecode.web.HttpActivity"
+    tools:context="com.firstlinecode.web.WebManagerActivity"
     android:orientation="vertical">
     <Button
-        android:id="@+id/httpBtn"
+        android:id="@+id/startHttpActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="httpURLConnect"/>
+        android:text="Http请求的基本原理"/>
     <Button
-        android:id="@+id/okHttpBtn"
+        android:id="@+id/startXMLActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="okHttp"/>
-    <ScrollView
+        android:text="XML解析"/>
+    <Button
+        android:id="@+id/startJsonActivity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/httpShow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+        android:layout_height="wrap_content"
+        android:text="JSON解析"/>
 
 </LinearLayout>

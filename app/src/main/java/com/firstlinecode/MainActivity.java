@@ -11,9 +11,11 @@ import com.firstlinecode.androidpermission.PermissionActivity;
 import com.firstlinecode.datasave.DataSaveActivity;
 import com.firstlinecode.datasave.SaveInFileActivity;
 import com.firstlinecode.fourComponents.MainComponentActivity;
+import com.firstlinecode.frame.DatabindingActivity;
 import com.firstlinecode.multiThread.ThreadActivity;
 import com.firstlinecode.multimedia.MultimediaActivity;
 import com.firstlinecode.ui.UiManagerActivity;
+import com.firstlinecode.web.WebManagerActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.startMultimedia).setOnClickListener(this);
         findViewById(R.id.startMultiThread).setOnClickListener(this);
         findViewById(R.id.startUI).setOnClickListener(this);
+        findViewById(R.id.startWeb).setOnClickListener(this);
+        findViewById(R.id.startDataBinding).setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.startUI:
                 Intent uiManager=new Intent(MainActivity.this, UiManagerActivity.class);
                 startActivity(uiManager);
+                break;
+            case R.id.startWeb:
+                Intent webManager=new Intent(MainActivity.this, WebManagerActivity.class);
+                startActivity(webManager);
+                break;
+            case R.id.startDataBinding:
+                Intent databinding=new Intent(MainActivity.this, DatabindingActivity.class);
+                startActivity(databinding);
                 break;
         }
     }

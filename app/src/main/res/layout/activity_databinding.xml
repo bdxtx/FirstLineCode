@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="loginViewHelper"
+            type="com.firstlinecode.frame.LoginViewHelper"/>
+        <variable
+            name="myHandler"
+            type="com.firstlinecode.frame.MyHandler"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的用户名"
+            android:text="@={loginViewHelper.username}"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的密码"
+            android:text="@={loginViewHelper.password}"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:onClick="@{myHandler.doLogin}"
+            android:enabled="@{myHandler.canLogin(loginViewHelper.username,loginViewHelper.password)}"
+            />
+    </LinearLayout>
+</layout>
