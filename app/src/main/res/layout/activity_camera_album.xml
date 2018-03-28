@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.firstlinecode.multimedia.MultimediaActivity"
+    tools:context="com.firstlinecode.multimedia.CameraAlbumActivity"
     android:orientation="vertical">
     <Button
-        android:id="@+id/gotoNotification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="android通知"/>
+        android:id="@+id/btn_camera"
+        android:text="拍照"/>
     <Button
-        android:id="@+id/gotoCameraAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="拍照获取图片"/>
+        android:id="@+id/btn_album"
+        android:text="从相册获取"/>
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

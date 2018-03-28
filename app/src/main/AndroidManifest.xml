@@ -105,7 +105,17 @@
         <activity android:name=".web.WebManagerActivity" />
         <activity android:name=".web.XMLActivity" />
         <activity android:name=".web.JsonActivity" />
-        <activity android:name=".frame.DatabindingActivity"></activity>
+        <activity android:name=".frame.DatabindingActivity" />
+        <activity android:name=".multimedia.CameraAlbumActivity"></activity>
+        <provider
+            android:authorities="com.firstlinecode.fileProvider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
     </application>
 
 </manifest>
