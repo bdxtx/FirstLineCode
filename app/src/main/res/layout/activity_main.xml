@@ -1,55 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/startComponent"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="四大组件"/>
-        <Button
-            android:id="@+id/startPermission"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </android.support.v7.widget.Toolbar>
+        <ScrollView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android权限"/>
-        <Button
-            android:id="@+id/startDataSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android数据存储"/>
-        <Button
-            android:id="@+id/startMultimedia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android多媒体"/>
-        <Button
-            android:id="@+id/startMultiThread"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android多线程"/>
-        <Button
-            android:id="@+id/startUI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android UI"/>
-        <Button
-            android:id="@+id/startWeb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android网络技术"/>
-        <Button
-            android:id="@+id/startDataBinding"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="android DataBinding"/>
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/startComponent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="四大组件"/>
+                <Button
+                    android:id="@+id/startPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android权限"/>
+                <Button
+                    android:id="@+id/startDataSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android数据存储"/>
+                <Button
+                    android:id="@+id/startMultimedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android多媒体"/>
+                <Button
+                    android:id="@+id/startMultiThread"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android多线程"/>
+                <Button
+                    android:id="@+id/startUI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android UI"/>
+                <Button
+                    android:id="@+id/startWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android网络技术"/>
+                <Button
+                    android:id="@+id/startDataBinding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android DataBinding"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="侧边栏"
+        android:textSize="30sp"
+        android:background="#fff"/>-->
+</android.support.v4.widget.DrawerLayout>
 
-</ScrollView>
+

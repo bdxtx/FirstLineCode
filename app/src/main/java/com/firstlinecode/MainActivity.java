@@ -3,9 +3,13 @@ package com.firstlinecode;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.firstlinecode.androidpermission.PermissionActivity;
 import com.firstlinecode.datasave.DataSaveActivity;
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         findViewById(R.id.startComponent).setOnClickListener(this);
         findViewById(R.id.startPermission).setOnClickListener(this);
         findViewById(R.id.startDataSave).setOnClickListener(this);
@@ -69,5 +75,28 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 startActivity(databinding);
                 break;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.backup:
+                Toast.makeText(this,"您点击了Backup",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.delete:
+                Toast.makeText(this,"您点击了delete",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.setting:
+                Toast.makeText(this,"您点击了setting",Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+        return true;
     }
 }
