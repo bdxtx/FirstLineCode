@@ -106,16 +106,19 @@
         <activity android:name=".web.XMLActivity" />
         <activity android:name=".web.JsonActivity" />
         <activity android:name=".frame.DatabindingActivity" />
-        <activity android:name=".multimedia.CameraAlbumActivity"></activity>
+        <activity android:name=".multimedia.CameraAlbumActivity" />
+
         <provider
-            android:authorities="com.firstlinecode.fileProvider"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.firstlinecode.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
         </provider>
+
+        <activity android:name=".ui.DrawerLayoutActivity"></activity>
     </application>
 
 </manifest>
