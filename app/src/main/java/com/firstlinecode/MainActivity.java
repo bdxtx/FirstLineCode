@@ -1,6 +1,9 @@
 package com.firstlinecode;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -42,12 +45,22 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.startUI).setOnClickListener(this);
         findViewById(R.id.startWeb).setOnClickListener(this);
         findViewById(R.id.startDataBinding).setOnClickListener(this);
+        findViewById(R.id.fab).setOnClickListener(this);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.mDrawerLayout);
         ActionBar actionBar=getSupportActionBar();
         if (actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
+        NavigationView nav_view= (NavigationView) findViewById(R.id.nav_view);
+        nav_view.setCheckedItem(R.id.nav_call);
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -84,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.startDataBinding:
                 Intent databinding=new Intent(MainActivity.this, DatabindingActivity.class);
                 startActivity(databinding);
+                break;
+            case R.id.fab:
+                Snackbar.make(v,"我们的第一个SnackBar",Snackbar.LENGTH_SHORT).setAction("取消", new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MainActivity.this,"我们点击了悬浮按钮",Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
                 break;
         }
     }
